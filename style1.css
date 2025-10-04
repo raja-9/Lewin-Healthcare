@@ -232,7 +232,7 @@
         }
 /* New logo background section */
 .logo-background {
-    background: url('all photos/rara1.jpg') center top no-repeat;
+    background: url('rara1.jpg') center top no-repeat;
     background-size: contain;
     /* background-color: white; Optional */
     min-height: 100vh;

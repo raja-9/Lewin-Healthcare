@@ -4,9 +4,9 @@ let totalSlides = 0;
 
 const doctorSlides = {
     "Dr Anuradha ": [
-        "all photos/ferro2.jpg",
-        "all photos/ferro3.jpg",
-        "all photos/rara2.jpg"
+        "ferro2.jpg",
+        "ferro3.jpg",
+        "rara2.jpg"
     ],
     "Dr C.A.A.Jose": [
         "chen1.jpg",
@@ -25,7 +25,7 @@ function showSlideshow(doctorName) {
     document.getElementById("homePage").style.display = "none";
     document.getElementById("slideshowPage").style.display = "block";
     document.getElementById("selectedDoctor").textContent = doctorName;
-    
+
     history.pushState({ page: "slideshow" }, "", "#slideshow");
 
 
