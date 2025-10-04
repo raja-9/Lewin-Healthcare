@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Representative</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Home Page -->
+        <div id="homePage">
+            <div class="logo-background">
+                <div class="overlay">
+                    <div class="company-name">Lewin HealthCare</div>
+                    <h2>Select a Doctor</h2>
+
+                    <div class="doctors-grid">
+                        <div class="doctor-card" onclick="showSlideshow('Dr Anuradha ')">
+                            <h3>Dr Anuradha </h3>
+                            <!-- <p>ENT</p> -->
+                        </div>
+                        
+                        <div class="doctor-card" onclick="showSlideshow('Dr C.A.A.Jose')">
+                            <h3>Dr C.A.A.Jose </h3>
+                            <!-- <p>ENT</p> -->
+                        </div>
+                        
+                        <div class="doctor-card" onclick="showSlideshow('Dr.Vasantha jose ')">
+                            <h3>Dr.Vasantha jose </h3>
+                            <!-- <p>ENT</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slideshow Page -->
+        <div id="slideshowPage">
+            <div class="slideshow-header">
+                <div class="doctor-info">
+                    <h2 id="selectedDoctor"></h2>
+                </div>
+                <button class="back-btn" onclick="goBack()">← Back</button>
+            </div>
+
+            <div class="slideshow-container" id="slidesContainer">
+             <!-- Slides will be loaded dynamically from script1.js -->
+            </div>
+
+            <div class="slide-controls">
+                <button class="nav-btn" onclick="prevSlide()">← Previous</button>
+                <div class="slide-counter">
+                    <span id="currentSlide">1</span> / <span id="totalSlides">3</span>
+                </div>
+                <button class="nav-btn" onclick="nextSlide()">Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>
