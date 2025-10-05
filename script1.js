@@ -26,6 +26,13 @@ function showSlideshow(doctorName) {
     document.getElementById("slideshowPage").style.display = "block";
     document.getElementById("selectedDoctor").textContent = doctorName;
 
+// Enter fullscreen for slideshow container only
+const elem = document.getElementById("slidesContainer");
+if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+} else if (elem.webkitRequestFullscreen) { // Safari
+    elem.webkitRequestFullscreen();
+}
     history.pushState({ page: "slideshow" }, "", "#slideshow");
 
 
@@ -64,6 +71,13 @@ function showSlideshow(doctorName) {
 }
 
 function goBack() {
+    // Exit fullscreen when going back
+if (document.fullscreenElement) {
+    document.exitFullscreen();
+} else if (document.webkitFullscreenElement) {
+    document.webkitExitFullscreen();
+}
+
     document.getElementById("homePage").style.display = "block";
     document.getElementById("slideshowPage").style.display = "none";
 }
@@ -126,5 +140,23 @@ window.addEventListener("popstate", (event) => {
     // If slideshow is currently shown → go back to home page
     if (document.getElementById("slideshowPage").style.display === "block") {
         goBack();
+    }
+});
+// 🌗 Toggle between Dark and Light mode
+function toggleTheme() {
+    const body = document.body;
+    const btn = document.querySelector('.mode-toggle');
+    const isDark = body.classList.toggle('dark-mode');
+    btn.textContent = isDark ? '☀️' : '🌙'; // change icon
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+}
+
+// Load previous theme preference
+window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        const btn = document.querySelector('.mode-toggle');
+        if (btn) btn.textContent = '☀️';
     }
 });

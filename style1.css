@@ -271,3 +271,53 @@
     font-weight: bold;
     margin-top: 200px;
 }
+/* 🌗 Toggle Button */
+.mode-toggle {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.mode-toggle:hover {
+    transform: scale(1.2);
+}
+
+/* 🌑 DARK MODE */
+.dark-mode {
+    background-color: #111;
+    color: #f1f1f1;
+}
+
+.dark-mode .container {
+    background: #1a1a1a;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode .doctor-card {
+    background: linear-gradient(135deg, #2b4162 0%, #121212 100%);
+    color: #ddd;
+}
+
+.dark-mode .slideshow-header {
+    background: #222;
+    color: #eee;
+}
+
+.dark-mode .back-btn,
+.dark-mode .nav-btn {
+    background: #444;
+    color: #eee;
+}
+
+.dark-mode .back-btn:hover,
+.dark-mode .nav-btn:hover {
+    background: #666;
+}
+
+.dark-mode .slide-counter {
+    color: #4ea8de;
+}
