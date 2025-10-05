@@ -26,13 +26,6 @@ function showSlideshow(doctorName) {
     document.getElementById("slideshowPage").style.display = "block";
     document.getElementById("selectedDoctor").textContent = doctorName;
 
-// Enter fullscreen for slideshow container only
-const elem = document.getElementById("slidesContainer");
-if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-} else if (elem.webkitRequestFullscreen) { // Safari
-    elem.webkitRequestFullscreen();
-}
     history.pushState({ page: "slideshow" }, "", "#slideshow");
 
 
@@ -160,3 +153,23 @@ window.addEventListener('DOMContentLoaded', () => {
         if (btn) btn.textContent = '☀️';
     }
 });
+// ⛶ Toggle Fullscreen for slideshow container
+function toggleFullscreen() {
+    const elem = document.getElementById("slidesContainer");
+
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        // Enter fullscreen
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) { // Safari
+            elem.webkitRequestFullscreen();
+        }
+    } else {
+        // Exit fullscreen
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}

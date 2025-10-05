@@ -12,6 +12,9 @@
         <div id="homePage">
             <div class="logo-background">
                 <div class="overlay">
+                    <div class="top-controls" style="position:absolute; top: 120px; right:10px;">
+                        <button class="mode-toggle" onclick="toggleTheme()">🌙</button>
+                    </div>
                     <div class="company-name">Lewin HealthCare</div>
                     <h2>Select a Doctor</h2>
 
@@ -41,7 +44,7 @@
                 <div class="doctor-info">
                     <h2 id="selectedDoctor"></h2>
                 </div>
-                <button class="mode-toggle" onclick="toggleTheme()">🌙</button>
+                <button class="fullscreen-btn" onclick="toggleFullscreen()">⛶</button>
                 <button class="back-btn" onclick="goBack()">← Back</button>
             </div>
 

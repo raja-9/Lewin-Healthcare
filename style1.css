@@ -321,3 +321,32 @@
 .dark-mode .slide-counter {
     color: #4ea8de;
 }
+/* 🌗 Dark/Light Toggle */
+.mode-toggle {
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.mode-toggle:hover {
+    transform: scale(1.2);
+}
+
+/* ⛶ Fullscreen Button */
+.fullscreen-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fullscreen-btn:hover {
+    transform: scale(1.2);
+    color: #4ea8de;
+}
